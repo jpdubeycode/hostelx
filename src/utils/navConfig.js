@@ -37,3 +37,7 @@ export const navConfig = {
     { to: '/student', label: 'Student view', icon: GraduationCap },
   ],
 }
+
+// Where the topbar's search box and bell should go for each role.
+export const searchPathFor = (role) => (role === 'admin' ? '/admin/search' : '/student/search')
+export const announcementsPathFor = (role) => (role === 'admin' ? '/admin/announcements' : '/student/announcements')
