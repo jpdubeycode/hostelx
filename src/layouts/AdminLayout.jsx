@@ -1,6 +1,5 @@
-import TempShell from '../components/layout/TempShell'
+import AppShell from '../components/layout/AppShell'
 
-// TODO(layouts step): swap TempShell for Sidebar + Topbar + BottomNav.
 export default function AdminLayout() {
-  return <TempShell navKey="admin" />
+  return <AppShell navKey="admin" />
 }

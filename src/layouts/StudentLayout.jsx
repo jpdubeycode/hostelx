@@ -1,6 +1,5 @@
-import TempShell from '../components/layout/TempShell'
+import AppShell from '../components/layout/AppShell'
 
-// TODO(layouts step): swap TempShell for Sidebar + Topbar + BottomNav.
 export default function StudentLayout() {
-  return <TempShell navKey="student" />
+  return <AppShell navKey="student" />
 }
