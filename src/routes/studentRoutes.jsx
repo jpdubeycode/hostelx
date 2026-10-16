@@ -12,6 +12,7 @@ import Suggestions from '../pages/student/Suggestions'
 import Announcements from '../pages/shared/Announcements'
 import Rules from '../pages/shared/Rules'
 import Search from '../pages/shared/Search'
+import StudentDetails from '../pages/shared/StudentDetails'
 
 // Committee members are students too, so they may use these routes as well.
 export const studentRoutes = (
@@ -27,5 +28,6 @@ export const studentRoutes = (
     <Route path="/student/announcements" element={<Announcements />} />
     <Route path="/student/rules" element={<Rules />} />
     <Route path="/student/search" element={<Search />} />
+    <Route path="/student/search/:id" element={<StudentDetails />} />
   </Route>
 )

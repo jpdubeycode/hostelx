@@ -9,7 +9,7 @@ import Complaints from '../pages/admin/Complaints'
 import Mess from '../pages/admin/Mess'
 import Announcements from '../pages/admin/Announcements'
 import Rules from '../pages/admin/Rules'
-import Search from '../pages/shared/Search'
+import Search from '../pages/admin/Search'
 
 export const adminRoutes = (
   <Route element={<RoleGuard allow={['admin']}><AdminLayout /></RoleGuard>}>
