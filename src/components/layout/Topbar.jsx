@@ -22,7 +22,7 @@ export default function Topbar() {
   const iconBtn = 'relative flex h-10 w-10 items-center justify-center rounded-xl text-ink-soft transition-colors hover:bg-slate-100 hover:text-ink'
 
   return (
-    <header className="sticky top-0 z-30 flex h-16 items-center gap-3 border-b border-surface-border bg-white/80 px-4 backdrop-blur-md sm:px-6">
+    <header className="sticky top-0 z-30 flex h-16 items-center gap-3 border-b border-brand-200/60 bg-gradient-to-r from-brand-200/70 via-white/60 to-aurora/15 px-4 shadow-sm shadow-brand-600/5 backdrop-blur-xl sm:px-6">
       <Logo className="lg:hidden" />
 
       <form onSubmit={submit} role="search" className="hidden max-w-md flex-1 md:block">

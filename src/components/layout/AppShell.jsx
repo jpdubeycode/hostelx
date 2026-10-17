@@ -22,7 +22,15 @@ export default function AppShell({ navKey }) {
       </a>
       <Sidebar items={items} collapsed={collapsed} onToggle={() => setCollapsed((c) => !c)} />
 
-      <div className={cn('flex min-h-screen flex-col transition-[padding] duration-200', collapsed ? 'lg:pl-20' : 'lg:pl-64')}>
+      {/* Theme-coloured fade so the dark sidebar blends into the page instead of cutting to white */}
+      <div
+        aria-hidden
+        className={cn(
+          'pointer-events-none fixed inset-y-0 z-0 hidden w-[34rem] bg-gradient-to-r from-brand-300/50 via-brand-100/40 to-transparent transition-[left] duration-200 lg:block',
+          collapsed ? 'left-20' : 'left-64',
+        )}
+      />
+      <div className={cn('relative z-10 flex min-h-screen flex-col transition-[padding] duration-200', collapsed ? 'lg:pl-20' : 'lg:pl-64')}>
         <Topbar />
         <main id="main" className="mx-auto w-full max-w-6xl flex-1 p-4 pb-28 sm:p-6 lg:pb-8">
           <Outlet />
