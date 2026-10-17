@@ -1,23 +1,28 @@
 import { cn } from '../../utils/cn'
 import Card from './Card'
 
-const tints = {
-  brand: 'bg-brand-50 text-brand-600', success: 'bg-emerald-50 text-emerald-600',
-  warning: 'bg-amber-50 text-amber-600', danger: 'bg-rose-50 text-rose-600', info: 'bg-sky-50 text-sky-600',
+const tiles = {
+  brand: 'from-brand-400 to-brand-600 shadow-brand-600/30',
+  success: 'from-emerald-400 to-emerald-600 shadow-emerald-600/30',
+  warning: 'from-amber-400 to-orange-500 shadow-orange-500/30',
+  danger: 'from-rose-400 to-rose-600 shadow-rose-600/30',
+  info: 'from-sky-400 to-sky-600 shadow-sky-600/30',
 }
+const blobs = { brand: 'bg-brand-400', success: 'bg-emerald-400', warning: 'bg-amber-400', danger: 'bg-rose-400', info: 'bg-sky-400' }
 
 /** Props: label, value, icon, tone, hint */
 export default function StatCard({ label, value, icon: Icon, tone = 'brand', hint }) {
   return (
-    <Card hover className="flex items-center gap-4">
+    <Card hover className="relative flex items-center gap-4 overflow-hidden">
+      <div className={cn('pointer-events-none absolute -right-8 -top-8 h-24 w-24 rounded-full opacity-20 blur-2xl', blobs[tone])} />
       {Icon && (
-        <div className={cn('flex h-12 w-12 shrink-0 items-center justify-center rounded-xl', tints[tone])}>
+        <div className={cn('relative flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-gradient-to-br text-white shadow-lg', tiles[tone])}>
           <Icon className="h-6 w-6" />
         </div>
       )}
-      <div className="min-w-0">
-        <p className="text-2xl font-bold leading-none text-ink">{value}</p>
-        <p className="mt-1.5 truncate text-sm text-ink-soft">{label}</p>
+      <div className="relative min-w-0">
+        <p className="text-3xl font-extrabold leading-none tracking-tight text-ink">{value}</p>
+        <p className="mt-1.5 truncate text-sm font-medium text-ink-soft">{label}</p>
         {hint && <p className="mt-0.5 truncate text-xs text-ink-muted">{hint}</p>}
       </div>
     </Card>
