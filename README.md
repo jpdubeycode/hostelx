@@ -147,7 +147,7 @@ Persisted state: `useLocalStorage('key', initial)` (keys are prefixed with `host
 | Member | Area |
 |---|---|
 | **Jai Prakash Dubey** | Foundation, design system, layouts, student experience, Mess Committee and polls |
-| **[Teammate name]** | Admin dashboard, students, rooms, search, announcements, rules |
+| **Sundram jha** | Admin dashboard, students, rooms, search, announcements, rules |
 
 - `main` is protected and always deployable. Never commit to it directly.
 - Feature branches: `jai/<feature>` and `teammate/<feature>`, merged through pull requests.
